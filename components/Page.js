@@ -10,10 +10,13 @@ const Page = ({ blok }) => {
       <Typography variant="h1" gutterBottom>
         {blok.title}
       </Typography>
-      <Image src={blok.image.filename} height="400" alt="" />
+
+      <Image src={blok.image.filename} width="500" height="300" alt="" />
+
       <Typography variant="body1" gutterBottom>
         {blok.description}
       </Typography>
+
       <Grid container spacing={3}>
         {blok.cards.map((mediaCard) => {
           return (
