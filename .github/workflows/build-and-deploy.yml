@@ -2,7 +2,10 @@ on:
   push:
     branches:    
       - master
-      
+
+env:
+  STORYBLOK_API_KEY: ${{ secrets.STORYBLOK_API_KEY }}
+
 name: Build and Publish
 jobs:
   FTP-Deploy-Action:
