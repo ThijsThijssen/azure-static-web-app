@@ -20,7 +20,7 @@ const Page = ({ blok }) => {
       <Grid container spacing={3}>
         {blok.cards.map((mediaCard) => {
           return (
-            <Grid item key={mediaCard.title}>
+            <Grid item key={mediaCard.title} xs={2}>
               <MediaCard blok={mediaCard} />
             </Grid>
           )
