@@ -16,7 +16,8 @@ export default function App() {
     <StyledApp>
       <CssBaseline />
       <Header />
-      <PlaceToVisit />
+      <PlaceToVisit id="place-to-visit" />
+      <PlaceToVisit id="contact" />
     </StyledApp>
   )
 }

@@ -31,7 +31,11 @@ const StyledCardBody = styled(Typography)({
 
 export default function ImageCard({ place, checked }) {
   return (
-    <Collapse in={checked} {...(checked ? { timeout: place.timeout } : {})}>
+    <Collapse
+      in={checked}
+      {...(checked ? { timeout: place.time } : {})}
+      collapsedSize={50}
+    >
       <StyledRoot>
         <StyledCardMedia
           component="img"

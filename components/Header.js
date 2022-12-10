@@ -2,6 +2,7 @@ import * as React from 'react'
 import { styled } from '@mui/system'
 import {
   AppBar,
+  Button,
   Collapse,
   IconButton,
   Toolbar,
@@ -15,7 +16,6 @@ import { Link as Scroll } from 'react-scroll'
 
 const StyledAppBar = styled(AppBar)({
   background: 'none',
-  fontFamily: 'Nunito',
 })
 
 const StyledSortIcon = styled(SortIcon)({
@@ -25,6 +25,7 @@ const StyledSortIcon = styled(SortIcon)({
 
 const StyledAppBarTitle = styled(Typography)({
   flexGrow: '1',
+  fontFamily: 'Nunito',
 })
 
 const StyledAppBarWrapper = styled(Toolbar)({
@@ -46,15 +47,23 @@ const StyledRoot = styled('div')({
 const StyledCenterText = styled(Typography)({
   color: '#FFF',
   fontSize: '5rem',
+  fontFamily: 'Nunito',
 })
 
 const StyledContainer = styled('div')({
   textAlign: 'center',
 })
 
-const StyledExpandMoreIcon = styled(ExpandMoreIcon)({
+export const StyledExpandMoreIcon = styled(ExpandMoreIcon)({
   color: '#5AFF3D',
   fontSize: '5rem',
+})
+
+const StyledMenuButton = styled(Button)({
+  color: '#fff',
+  fontSize: '2rem',
+  marginLeft: '20px',
+  fontFamily: 'Nunito',
 })
 
 export default function Header() {
@@ -69,9 +78,12 @@ export default function Header() {
           <StyledAppBarTitle variant="h2">
             My<StyledColorText>Island.</StyledColorText>
           </StyledAppBarTitle>
-          <IconButton>
-            <StyledSortIcon />
-          </IconButton>
+          <Scroll to="place-to-visit" smooth={true}>
+            <StyledMenuButton>About</StyledMenuButton>
+          </Scroll>
+          <Scroll to="contact" smooth={true}>
+            <StyledMenuButton>Contact</StyledMenuButton>
+          </Scroll>
         </StyledAppBarWrapper>
       </StyledAppBar>
       <Collapse
