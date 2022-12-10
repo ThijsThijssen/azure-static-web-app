@@ -2,6 +2,7 @@ on:
   push:
     branches:    
       - master
+      - develop
 
 env:
   STORYBLOK_API_KEY: ${{ secrets.STORYBLOK_API_KEY }}
