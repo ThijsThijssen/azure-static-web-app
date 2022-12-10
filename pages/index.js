@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { getStoryblokApi } from '@storyblok/react'
 import Page from '../components/Page'
+import App from './landing-page'
 
 export const getStaticProps = async () => {
   // home is the default slug for the homepage in Storyblok
@@ -26,10 +27,10 @@ export default function Home({ story }) {
   return (
     <>
       <Head>
-        <title>Azure Static Web App</title>
+        <title>My Island.</title>
       </Head>
       <main>
-        <Page blok={story.content} />
+        <App />
       </main>
     </>
   )
