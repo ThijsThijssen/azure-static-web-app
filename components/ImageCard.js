@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { styled } from '@mui/system'
-import { Collapse } from '@mui/material'
 
 const StyledRoot = styled(Card)({
   maxWidth: 645,
@@ -29,26 +28,20 @@ const StyledCardBody = styled(Typography)({
   fontSize: '1.1rem',
 })
 
-export default function ImageCard({ place, checked }) {
+export default function ImageCard({ place }) {
   return (
-    <Collapse
-      in={checked}
-      {...(checked ? { timeout: place.time } : {})}
-      collapsedSize={50}
-    >
-      <StyledRoot>
-        <StyledCardMedia
-          component="img"
-          image={place.imageUrl}
-          alt={place.title}
-        />
-        <CardContent>
-          <StyledCardTitle gutterBottom variant="h3" component="div">
-            {place.title}
-          </StyledCardTitle>
-          <StyledCardBody variant="body2">{place.body}</StyledCardBody>
-        </CardContent>
-      </StyledRoot>
-    </Collapse>
+    <StyledRoot>
+      <StyledCardMedia
+        component="img"
+        image={place.imageUrl}
+        alt={place.title}
+      />
+      <CardContent>
+        <StyledCardTitle gutterBottom variant="h3" component="div">
+          {place.title}
+        </StyledCardTitle>
+        <StyledCardBody variant="body2">{place.body}</StyledCardBody>
+      </CardContent>
+    </StyledRoot>
   )
 }

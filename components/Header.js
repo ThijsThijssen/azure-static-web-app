@@ -78,6 +78,9 @@ export default function Header() {
           <StyledAppBarTitle variant="h2">
             My<StyledColorText>Island.</StyledColorText>
           </StyledAppBarTitle>
+          <Scroll to="header" smooth={true}>
+            <StyledMenuButton>Home</StyledMenuButton>
+          </Scroll>
           <Scroll to="place-to-visit" smooth={true}>
             <StyledMenuButton>About</StyledMenuButton>
           </Scroll>

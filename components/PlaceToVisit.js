@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { styled } from '@mui/system'
 import ImageCard from './ImageCard'
-import places from '../static/places'
+import places from '../data/places'
 import useWindowPosition from '../hooks/useWindowPosition'
 
 const StyledCardWrapper = styled('div')({
@@ -12,11 +12,10 @@ const StyledCardWrapper = styled('div')({
 })
 
 export default function PlaceToVisit({ id }) {
-  const checked = useWindowPosition('header')
   return (
     <StyledCardWrapper id={id}>
-      <ImageCard place={places[0]} checked={checked} />
-      <ImageCard place={places[1]} checked={checked} />
+      <ImageCard place={places[0]} />
+      <ImageCard place={places[1]} />
     </StyledCardWrapper>
   )
 }
